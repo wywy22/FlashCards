@@ -133,7 +133,7 @@ function showNextProblem() {
 }
 
 function startSpeechRecognition() {
-	var currentTime = 60;
+	var currentTime = 600;
 	var timer;
 	var speech = new SpeechRecognition();
 	speech.continuous = true;
@@ -143,7 +143,7 @@ function startSpeechRecognition() {
 		// Run for 60 seconds and stop
 		setTimeout(function() {
 			speech.stop();
-		}, 60000);
+		}, 600000);
 
 		document.getElementsByClassName('scores')[0].classList.remove('hidden');
 		document.getElementsByClassName('card')[0].classList.remove('hidden');
@@ -183,7 +183,7 @@ function startSpeechRecognition() {
 
 
 	speech.onend = function() {
-		currentTime = 60;
+		currentTime = 600;
 		clearInterval(timer);
 		var timeRemaining = document.getElementsByClassName('timeRemaining')[0];
 		timeRemaining.textContent = '1:00';
